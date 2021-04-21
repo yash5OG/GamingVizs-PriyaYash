@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import pandas as pd
 import datetime as dt
 import json
@@ -31,7 +31,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # return render_template("index.html")
+    return render_template("dashboard.html")
     return (
         "<h1>Welcome to the Twitch Dashboard Homepage!</h1><br/>"
         "Available Routes:<br/>"
@@ -46,19 +46,22 @@ def home():
     )
 
 
-# @app.route("/top_games")
-# def precipitation():
-#     # Retrieve the last 12 months of precipitation data
-#     prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+@app.route("/top_games")
+def precipitation():
+    return render_template("top_games.html")
+
+
+    # Retrieve the last 12 months of precipitation data
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
     
-#     # Perform a query to retrieve the data and precipitation scores
-#     date_prcp = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= prev_year).all()
+    # Perform a query to retrieve the data and precipitation scores
+    date_prcp = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= prev_year).all()
     
-#     session.close()
+    session.close()
     
-#     precipitation = {date: prcp for date, prcp in date_prcp}
-#     print(precipitation)
-#     return jsonify(precipitation)
+    precipitation = {date: prcp for date, prcp in date_prcp}
+    print(precipitation)
+    return jsonify(precipitation)
 
 
 # @app.route("/platforms")
