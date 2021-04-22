@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
 # Create engine to hawaii.sqlite
-engine = create_engine("sqlite:///twitch_data.sqlite")
+engine = create_engine("sqlite:///./static/sqlite/twitch.sqlite")
 
 # Reflect an existing database into a new model
 Base = automap_base()
