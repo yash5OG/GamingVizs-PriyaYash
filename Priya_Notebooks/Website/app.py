@@ -20,8 +20,8 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save references to each table
-# game_data = Base.classes.Twitch_game_data
-# top_games = Base.classes.twitch_top_games
+# game_data = Base.classes.game_data
+top_games = Base.classes.top_games
 
 # Create our session (link) from Python to the DB
 session = Session(engine)
@@ -32,6 +32,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("dashboard.html")
+    
     # return (
     #     "<h1>Welcome to the Twitch Dashboard Homepage!</h1><br/>"
     #     "Available Routes:<br/>"
@@ -46,11 +47,10 @@ def home():
     # )
 
 
-# @app.route("/top_games")
-# def icons():
-#     return render_template("icons.html")
+@app.route("/top_games")
+def top_games():
+    return render_template("icons.html", top_games=top_games)
 
-#     session.close()
 
 # @app.route("/platforms")
 # def stations():
