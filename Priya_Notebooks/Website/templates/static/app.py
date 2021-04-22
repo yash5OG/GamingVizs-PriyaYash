@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template,redirect
+from flask import Flask, jsonify, render_template
 import pandas as pd
 import datetime as dt
 import json
@@ -46,11 +46,11 @@ def home():
     # )
 
 
-# @app.route("/top_games")
-# def icons():
-#     return render_template("icons.html")
+@app.route("/top_games")
+def icons():
+    return render_template("icons.html")
 
-#     session.close()
+    session.close()
 
 # @app.route("/platforms")
 # def stations():
