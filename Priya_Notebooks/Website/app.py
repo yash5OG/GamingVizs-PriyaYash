@@ -20,7 +20,7 @@ Base = automap_base()
 Base.prepare(engine, reflect=True)
 
 # Save references to each table
-# game_data = Base.classes.game_data
+game_data = Base.classes.game_data
 top_games = Base.classes.top_games
 
 # Create our session (link) from Python to the DB
@@ -48,8 +48,12 @@ def home():
 
 
 @app.route("/top_games")
-def top_games():
-    return render_template("icons.html", top_games=top_games)
+def games():
+    data_list = []
+    for row in session.query(top_games).all():
+        data_list.append(row.__dict__["game_name"])
+    # return data_list
+    return render_template("icons.html", list=data_list)
 
 
 # @app.route("/platforms")
