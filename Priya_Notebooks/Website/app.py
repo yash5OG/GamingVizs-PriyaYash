@@ -56,9 +56,9 @@ def games():
     return render_template("icons.html", list=data_list)
 
 
-# @app.route("/platforms")
-# def stations():
-#     # List the stations
+@app.route("/game_stats")
+def stats():
+    return render_template("dashboard.html")
 #     results = session.query(Station.station).all()
     
 #     session.close()

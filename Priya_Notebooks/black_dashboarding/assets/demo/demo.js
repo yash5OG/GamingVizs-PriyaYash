@@ -99,7 +99,7 @@ demo = {
           fill: true,
           backgroundColor: gradientFill,
           borderWidth: 2,
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
+          data: [700, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630]
         }]
       },
       options: gradientChartOptionsConfiguration
@@ -374,7 +374,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [100, 100, 70, 80, 120, 80],
       }]
     };
 
@@ -472,9 +472,23 @@ demo = {
       data.labels = chart_labels;
       myChartData.update();
     });
-
+    
     $("#2").click(function() {
       var chart_data = [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
+      var data = myChartData.config.data;
+      data.datasets[0].data = chart_data;
+      data.labels = chart_labels;
+      myChartData.update();
+    });
+    $("#3").click(function() {
+      var chart_data = [900, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
+      var data = myChartData.config.data;
+      data.datasets[0].data = chart_data;
+      data.labels = chart_labels;
+      myChartData.update();
+    });
+    $("#4").click(function() {
+      var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
