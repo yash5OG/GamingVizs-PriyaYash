@@ -31,7 +31,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("dashboard.html")
+    return render_template("user.html")
     
     # return (
     #     "<h1>Welcome to the Twitch Dashboard Homepage!</h1><br/>"
