@@ -16,24 +16,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <title>
-    Y&P Twitch Dashboard
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <!-- Nucleo Icons -->
-  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link href="../assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{url_for('static', filename = 'img/apple-icon.png')}}">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename = 'img/favicon.png')}}">
+    <title>
+      Y&P Twitch Dashboard
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="{{url_for('static', filename = 'css/nucleo-icons.css')}}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="{{url_for('static', filename = 'css/black-dashboard.css')}}" rel="stylesheet" />
+  </head>
 
 <body class="">
   <div class="wrapper">
@@ -52,21 +49,21 @@
         </div>
         <ul class="nav">
           <li>
-            <a href="./dashboard.html">
-              <i class="tim-icons icon-chart-pie-36"></i>
-              <p>Dashboard</p>
+            <a href="/">
+              <i class="tim-icons icon-badge"></i>
+              <p>Welcome</p>
             </a>
           </li>
           <li class="active ">
-            <a href="./icons.html">
+            <a href="/top_games">
               <i class="tim-icons icon-atom"></i>
-              <p>Icons</p>
+              <p>Top Games</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
-              <i class="tim-icons icon-pin"></i>
-              <p>Maps</p>
+            <a href="/game_stats">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
             </a>
           </li>
           <li>
@@ -141,7 +138,7 @@
               <li class="dropdown nav-item">
                 <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                   <div class="photo">
-                    <img src="../assets/img/anime3.png" alt="Profile Photo">
+                    <img  src="{{url_for('static', filename = 'img/gaming.png')}}"alt="Profile Photo">
                   </div>
                   <b class="caret d-none d-lg-block d-xl-block"></b>
                   <p class="d-lg-none">
@@ -149,10 +146,7 @@
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-navbar">
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li>
-                  <li class="dropdown-divider"></li>
-                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Log out</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Thanks for Visiting!</a></li>
                 </ul>
               </li>
               <li class="separator d-lg-none"></li>
@@ -184,605 +178,14 @@
               </div>
               <div class="card-body all-icons">
                 <div class="row">
+                  {% for game in list %}
                   <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
                     <div class="font-icon-detail">
                       <i class="tim-icons icon-controller"></i>
-                      <p>icon-alert-circle-exc</p>
+                      <p>{{ game }}</p>
                     </div>
                   </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-align-center</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-align-left-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-app</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-atom</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-attach-87</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-badge</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bag-16</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bank</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-basket-simple</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bell-55</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bold</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-book-bookmark</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-double-right</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bulb-63</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bullet-list-67</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-bus-front-12</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-button-power</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-camera-18</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-calendar-60</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-caps-small</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-cart</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-chart-bar-32</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-chart-pie-36</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-chat-33</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-check-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-cloud-download-93</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-cloud-upload-94</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-coins</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-compass-05</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-controller</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-credit-card</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-delivery-fast</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-email-85</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-gift-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-globe-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-headphones</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-heart-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-html5</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-double-left</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-image-02</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-istanbul</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-key-25</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-laptop</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-light-3</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-link-72</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-lock-circle</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-map-big</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-minimal-down</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-minimal-left</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-minimal-right</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-minimal-up</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-mobile</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-molecule-40</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-money-coins</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-notes</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-palette</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-paper</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-pin</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-planet</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-puzzle-10</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-pencil</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-satisfied</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-scissors</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-send</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-settings-gear-63</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-settings</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-wifi</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-single-02</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-single-copy-04</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-sound-wave</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-spaceship</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-square-pin</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-support-17</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-tablet-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-tag</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-tap-02</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-tie-bow</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-time-alarm</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-trash-simple</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-trophy</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-tv-2</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-upload</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-user-run</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-vector</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-video-66</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-wallet-43</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-volume-98</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-watch-time</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-world</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-zoom-split</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-refresh-01</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-refresh-02</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-shape-star</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-components</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-triangle-right-17</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-button-pause</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-simple-remove</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-simple-add</p>
-                    </div>
-                  </div>
-                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
-                    <div class="font-icon-detail">
-                      <i class="tim-icons icon-controller"></i>
-                      <p>icon-simple-delete</p>
-                    </div>
+                  {% endfor %}
                   </div>
                 </div>
               </div>
@@ -819,20 +222,19 @@
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-  <!--  Google Maps Plugin    -->
-  <!-- Place this tag in your head or just before your close body tag. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- href="{{url_for('static', filename = 'img/apple-icon.png')}}" -->
+  <script src="{{url_for('static', filename = 'js/core/jquery.min.js')}}"></script>  
+  <script src="{{url_for('static', filename = 'js/core/popper.min.js')}}"></script>  
+  <script src="{{url_for('static', filename = 'js/core/bootstrap.min.js')}}"></script>  
+  <script src="{{url_for('static', filename = 'js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>  
+
   <!-- Chart JS -->
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="{{url_for('static', filename = 'js/plugins/chartjs.min.js')}}"></script>
   <!--  Notifications Plugin    -->
-  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <script src="{{url_for('static', filename = 'js/plugins/bootstrap-notify.js')}}"></script>
   <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
-  <script src="../assets/demo/demo.js"></script>
+  <script src="{{url_for('static', filename = 'js/black-dashboard.min.js')}}"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{{url_for('static', filename = 'demo/demo.js')}}"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -942,6 +344,13 @@
           $('body').removeClass('white-content');
         });
       });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
     });
   </script>
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
