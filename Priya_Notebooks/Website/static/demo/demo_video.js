@@ -328,7 +328,7 @@ demo = {
           },
           ticks: {
             suggestedMin: 60,
-            suggestedMax: 120,
+            suggestedMax: 100,
             padding: 20,
             fontColor: "#9e9e9e"
           }
@@ -394,7 +394,7 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['Yes', 'No'],
+      labels: ['Europe', 'Asia', 'N.A.', 'S.A.', 'Aus', 'Africa'],
       datasets: [{
         label: "Count",
         fill: true,
@@ -410,7 +410,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [87, 13],
+        data: [19, 11, 22, 3, 2, 0],
       }]
     };
 
