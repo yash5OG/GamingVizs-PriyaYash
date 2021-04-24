@@ -358,9 +358,9 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
 
     var data = {
-      labels: ['FEB','APR', 'JUN','AUG', 'OCT', 'DEC'],
+      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
       datasets: [{
-        label: "Data",
+        label: "Hours",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#d048b6',
@@ -374,7 +374,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [30.7, 29.1, 38.6, 54.1, 59.9, 53.6, 55.7, 55.6, 52.5, 57.5, 59.5, 63.5 ]
       }]
     };
 
@@ -394,9 +394,9 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['FEB','APR', 'JUN','AUG', 'OCT', 'DEC'],
+      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
       datasets: [{
-        label: "My First dataset",
+        label: "Total",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#00d6b4',
@@ -410,7 +410,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
+        data: [41.2, 41.8, 51.9, 75.1, 80.5, 74.4, 74.9, 74.8, 73.0, 77.3, 82.7, 85.3],
       }]
     };
 
@@ -424,7 +424,7 @@ demo = {
 
 
     var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-    var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+    var chart_data = [414.3, 415.4, 464.7, 441.2, 427.0, 421.4, 413.1, 402.9, 360.4, 421.4, 419.4, 455.3];
 
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
@@ -439,7 +439,7 @@ demo = {
       data: {
         labels: chart_labels,
         datasets: [{
-          label: "Hours",
+          label: "Total",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: '#d346b1',
@@ -466,7 +466,7 @@ demo = {
       myChartData.update();
     });
     $("#1").click(function() {
-      var chart_data = [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120];
+      var chart_data = [544.5, 465.1, 483.4, 500.3, 472.7, 474.9, 511.6, 495.1, 487.0, 547.0, 536.7, 526.5];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
@@ -474,14 +474,14 @@ demo = {
     });
 
     $("#2").click(function() {
-      var chart_data = [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
+      var chart_data = [659.7, 574.7, 670.4, 676.9, 704.2, 714.8, 721.2, 789.2, 749.2, 779.9, 776.2, 771.8];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#3").click(function() {
-      var chart_data = [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120];
+      var chart_data = [846.7, 810.7, 870.2, 812.1, 852.1, 846.8, 835.5, 918.9, 810.6, 820.5, 806.6, 798.9];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
@@ -489,7 +489,7 @@ demo = {
     });
 
     $("#4").click(function() {
-      var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+      var chart_data = [903.6, 881.6, 1108.8, 1665.3, 1596.3, 1491.5, 1424.2, 1470.4, 1444.8, 1629.3, 1640.8, 1719.7];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
@@ -512,9 +512,9 @@ demo = {
         display: false
       },
       data: {
-        labels: ['FEB','APR', 'JUN','AUG', 'OCT', 'DEC'],
+        labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
         datasets: [{
-          label: "Countries",
+          label: "Total",
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
@@ -522,7 +522,7 @@ demo = {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: [1216.1, 1268.5, 1492.2, 2316.0, 2148.4, 2074.3, 1916.7, 1978.9, 2009.4, 2192.8, 2282.0, 2314.5]
         }]
       },
       options: gradientBarChartConfiguration

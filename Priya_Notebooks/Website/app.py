@@ -59,13 +59,10 @@ def games():
 @app.route("/game_stats")
 def stats():
     return render_template("dashboard.html")
-#     results = session.query(Station.station).all()
-    
-#     session.close()
-#     stations = list(np.ravel(results))
-    
-#     return jsonify(stations)
 
+@app.route("/tables")
+def tables():
+    return render_template("tables.html")
 
 # @app.route("/timeline")
 # def tobs():
