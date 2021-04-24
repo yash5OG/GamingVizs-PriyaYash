@@ -66,7 +66,7 @@ def tables():
 
 @app.route("/video_stats")
 def vid_stats():
-    return render_template("dashboard2.html")
+    return render_template("video.html")
 
 # @app.route("/timeline")
 # def tobs():
