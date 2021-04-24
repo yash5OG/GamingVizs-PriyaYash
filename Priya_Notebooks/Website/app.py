@@ -68,6 +68,10 @@ def tables():
 def vid_stats():
     return render_template("video.html")
 
+@app.route("/bubbles")
+def bubbles():
+    return render_template("bubbles.html")
+
 # @app.route("/timeline")
 # def tobs():
 #     # Query the dates and temperature observations of the most active station for the last year of data
