@@ -358,7 +358,7 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
 
     var data = {
-      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['en', 'es', 'pt-br', 'en-gb', 'ru', 'ja', 'it'],
       datasets: [{
         label: "Hours",
         fill: true,
@@ -374,7 +374,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [30.7, 29.1, 38.6, 54.1, 59.9, 53.6, 55.7, 55.6, 52.5, 57.5, 59.5, 63.5 ]
+        data: [39, 37, 9, 7, 6, 1, 1 ]
       }]
     };
 
@@ -394,7 +394,7 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['Yes', 'No'],
       datasets: [{
         label: "Total",
         fill: true,
@@ -410,7 +410,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [41.2, 41.8, 51.9, 75.1, 80.5, 74.4, 74.9, 74.8, 73.0, 77.3, 82.7, 85.3],
+        data: [87, 13],
       }]
     };
 
@@ -757,7 +757,7 @@ demo = {
         display: false
       },
       data: {
-        labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+        labels: ['Yes', 'No'],
         datasets: [{
           label: "Total",
           fill: true,
@@ -767,7 +767,7 @@ demo = {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [1216.1, 1268.5, 1492.2, 2316.0, 2148.4, 2074.3, 1916.7, 1978.9, 2009.4, 2192.8, 2282.0, 2314.5]
+          data: [90, 10]
         }]
       },
       options: gradientBarChartConfiguration
