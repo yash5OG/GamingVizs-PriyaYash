@@ -60,17 +60,17 @@ def games():
 def stats():
     return render_template("dashboard.html")
 
-@app.route("/tables")
-def tables():
-    return render_template("tables.html")
+# @app.route("/tables")
+# def tables():
+#     return render_template("tables.html")
 
 @app.route("/video_stats")
 def vid_stats():
     return render_template("video.html")
 
-@app.route("/bubbles")
-def bubbles():
-    return render_template("bubbles.html")
+# @app.route("/bubbles")
+# def bubbles():
+#     return render_template("bubbles.html")
 
 # @app.route("/timeline")
 # def tobs():

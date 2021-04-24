@@ -360,7 +360,7 @@ demo = {
     var data = {
       labels: ['en', 'es', 'pt-br', 'en-gb', 'ru', 'ja', 'it'],
       datasets: [{
-        label: "Hours",
+        label: "Count",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#d048b6',
@@ -396,7 +396,7 @@ demo = {
     var data = {
       labels: ['Yes', 'No'],
       datasets: [{
-        label: "Total",
+        label: "Count",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#00d6b4',
@@ -561,7 +561,7 @@ demo = {
       data: {
         labels: ['Yes', 'No'],
         datasets: [{
-          label: "Total",
+          label: "Count",
           fill: true,
           backgroundColor: gradientStroke,
           hoverBackgroundColor: gradientStroke,
