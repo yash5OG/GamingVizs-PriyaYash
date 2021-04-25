@@ -26,15 +26,15 @@ Which then allows you to import TwitchClient from twitch.
 ## Notebooks 
 Each notebook is titled accordingly - please reference each notebook for any additional details & process.
 
-# Cleaning & Transformations 
+## Cleaning & Transformations 
 The datasets in kaggle were already relatively clean where the only cleaning was required was to clean any additional columns and reset any column titles as needed.
 
 For the Twitch API, the data required a pprint to be able to appropriately read the data, but was relatively cleaned. The transformation to a dataframe required parsing through the various items for each game to be able to extract each of the names, viewers and channels for the associated games to convert to a dataframe within pandas. 
 
-# Loading
+## Loading
 The initial upload required the creation of a new database in postgres, but I used the psycogp2 package in order to create a connection into the postgres server aand create the database rather than using pgAdmin and creating it within that interface. Further steps are noted in the jupyter notebook. 
 
 After closing that connection, I used sqlalchemy to upload and create the tables for each of the dataframes within the gaming_db to upload my data. I had chosen sqlalchemy for it's ease of use and later versatility when I wanted to transform the data or for later updates into the database. 
 
-# Additional Notes
+## Additional Notes
 Please noted for the Twitch API, you will need your own client ID in order to access the APIs and for the postgres access through sqlalchemy or psycogp2 you will also need to use your own local username, password, host and port as needed. 
